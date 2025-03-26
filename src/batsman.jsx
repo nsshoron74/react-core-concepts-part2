@@ -19,7 +19,7 @@ export default function Batsman() {
   return (
     <div>
       <h2>Player: Mushfique</h2>
-      <p><small>Six: {sixes} </small></p>
+      <p><small>Six: {sixes} </small></p> 
 
       {runs > 50 && <p>Your score: 50</p>}
 
