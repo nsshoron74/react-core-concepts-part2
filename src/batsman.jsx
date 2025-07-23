@@ -9,23 +9,32 @@ export default function Batsman() {
     setRuns(updatedRuns);
   };
 
+  const handleFour = () => {
+    const updatedRuns = runs + 4;
+    setRuns(updatedRuns);
+  };
+
   const handleSix = () => {
     const updatedRuns = runs + 6;
-    const updatedSixes = sixes + 1;
-    setSixes(updatedSixes);
+    const updatedSixes = sixes + 1
+    setSixes(updatedSixes)
     setRuns(updatedRuns);
   };
 
   return (
     <div>
-      <h2>Player: Mushfique</h2>
-      <p><small>Six: {sixes} </small></p> 
+      <h2>Player: BD batsman </h2>
+      <p>
+        <small>Six: {sixes} </small>
+      </p>
 
-      {runs > 50 && <p>Your score: 50</p>}
+{
+    runs > 50 && <p>Your score: 50</p>
+}
 
       <h1>Score: {runs} </h1>
-      <button onClick={handleSingle}>Singles</button>
-      <button>Four</button>
+      <button onClick={handleSingle}>Single</button>
+      <button onClick={handleFour}>Four</button>
       <button onClick={handleSix}>Six</button>
     </div>
   );
